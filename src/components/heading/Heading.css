@@ -1,0 +1,15 @@
+.heading {
+  background-color: var(--background-dark);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding-left: 1rem;
+  font-size: 1.25rem;
+
+}
+
+.restart-game-button {
+  color: var(--text-primary) !important;
+  border-color: var(--text-primary) !important;
+}
