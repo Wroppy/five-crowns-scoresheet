@@ -19,6 +19,11 @@ const PreGamePage = () => {
     setPlayerName("");
   };
 
+  const deletePlayer = (index) => {
+    const newPlayers = players.filter((player, i) => i !== index);
+    setPlayers(newPlayers);
+  };
+
   return (
     <div className="pre-game-page">
       <form className="pre-game-page-heading" onSubmit={addPlayer}>
@@ -43,7 +48,7 @@ const PreGamePage = () => {
           <div className="player-list">
             {players.map((player, index) => (
               <div className="player-card" key={index}>
-                <IconButton>
+                <IconButton onClick={() => deletePlayer(index)}>
                   <DeleteOutlinedIcon/>
                 </IconButton>
                 <span>{player}</span>
