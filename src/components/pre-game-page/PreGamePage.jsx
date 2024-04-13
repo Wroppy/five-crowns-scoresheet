@@ -17,12 +17,17 @@ const PreGamePage = () => {
     }
     setPlayers([...players, playerName]);
     setPlayerName("");
+
   };
 
   const deletePlayer = (index) => {
     const newPlayers = players.filter((player, i) => i !== index);
     setPlayers(newPlayers);
   };
+
+  const startGame = () => {
+    localStorage.setItem("players", JSON.stringify([...players, playerName]));
+  }
 
   return (
     <div className="pre-game-page">
@@ -58,7 +63,7 @@ const PreGamePage = () => {
         </div>
       </div>
       <div className="pre-game-page-footer">
-        <Button className="start-game-button" variant="outlined">
+        <Button onClick={startGame} className="start-game-button" variant="outlined">
           Start Game
         </Button>
       </div>
