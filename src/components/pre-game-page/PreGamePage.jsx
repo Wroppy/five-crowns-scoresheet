@@ -4,8 +4,7 @@ import "./PreGamePage.css";
 import { useState } from "react";
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 
-const PreGamePage = () => {
-  const [players, setPlayers] = useState([]);
+const PreGamePage = ({setPage, players, setPlayers}) => {
   const [playerName, setPlayerName] = useState("");
 
   const addPlayer = (e) => {
@@ -26,7 +25,12 @@ const PreGamePage = () => {
   };
 
   const startGame = () => {
-    localStorage.setItem("players", JSON.stringify([...players, playerName]));
+    // Checks if there are at least 2 players to start the game
+    if (players.length < 2) {
+      return;
+    }
+
+    setPage(2);
   }
 
   return (
