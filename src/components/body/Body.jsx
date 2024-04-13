@@ -1,9 +1,9 @@
-import ScoreSheetHeading from "../score-sheet-heading/ScoreSheetHeading";
 import "./Body.css";
+import PreGamePage from "../pre-game-page/PreGamePage";
 
 const Body = () => {
   return ( <div className="body">
-    <ScoreSheetHeading/>
+    <PreGamePage/>
   </div> );
 }
  

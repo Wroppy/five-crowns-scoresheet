@@ -3,6 +3,9 @@
   height: 100vh;
   background-color: var(--background-primary);
   color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  
 }
 
 /* Removes the auto complete background colour on MUI's textfield*/

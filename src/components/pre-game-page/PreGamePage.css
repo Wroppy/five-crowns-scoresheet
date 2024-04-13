@@ -1,0 +1,32 @@
+.add-player-field {
+  flex-grow: 1;
+}
+
+.pre-game-page-heading {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+
+.pre-game-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.pre-game-page-footer {
+  display: flex;
+  width: 100%;
+
+}
+
+.pre-game-page-body{
+  flex-grow: 1; 
+}
+
+.start-game-button {
+  flex-grow: 1;
+}

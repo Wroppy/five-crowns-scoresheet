@@ -1,5 +1,6 @@
 .body {
   padding: 32px;
   display: flex;
-  
+  overflow: auto;
+  flex-grow: 1;
 }
