@@ -20,14 +20,24 @@
 .pre-game-page-footer {
   display: flex;
   width: 100%;
-
 }
 
-.pre-game-page-body{
-  flex-grow: 1; 
+.pre-game-page-body {
+  flex-grow: 1;
   width: 100%;
 }
 
 .start-game-button {
   flex-grow: 1;
 }
+
+.player-list {
+  padding: 0 16px;
+}
+
+.player-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+

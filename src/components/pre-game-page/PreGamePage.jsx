@@ -1,7 +1,8 @@
-import { TextField } from "@mui/material";
+import { IconButton, TextField } from "@mui/material";
 import Button from "@mui/material/Button";
 import "./PreGamePage.css";
 import { useState } from "react";
+import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 
 const PreGamePage = () => {
   const [players, setPlayers] = useState([]);
@@ -21,26 +22,34 @@ const PreGamePage = () => {
   return (
     <div className="pre-game-page">
       <form className="pre-game-page-heading" onSubmit={addPlayer}>
-          <TextField
-            type="text"
-            placeholder="Add player name"
-            label="Add player name"
-            variant="outlined"
-            size="small"
-            className="add-player-field"
-            value={playerName}
-            onChange={(e) => setPlayerName(e.target.value)}
-          />
-          <Button variant="outlined" type="submit">Add Player</Button>
+        <TextField
+          type="text"
+          placeholder="Add player name"
+          label="Add player name"
+          variant="outlined"
+          size="small"
+          className="add-player-field"
+          value={playerName}
+          onChange={(e) => setPlayerName(e.target.value)}
+        />
+        <Button variant="outlined" type="submit">
+          Add Player
+        </Button>
       </form>
       <div className="pre-game-page-body">
-        <div className="player-list">
+        <div className="player-list-viewer">
           <h2>Players</h2>
-          <ul>
-            <li>Player 1</li>
-            <li>Player 2</li>
-            <li>Player 3</li>
-          </ul>
+          {players.length === 0 && <p>No players added yet</p>}
+          <div className="player-list">
+            {players.map((player, index) => (
+              <div className="player-card" key={index}>
+                <IconButton>
+                  <DeleteOutlinedIcon/>
+                </IconButton>
+                <span>{player}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="pre-game-page-footer">
