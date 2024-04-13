@@ -25,6 +25,7 @@
 
 .pre-game-page-body{
   flex-grow: 1; 
+  width: 100%;
 }
 
 .start-game-button {
