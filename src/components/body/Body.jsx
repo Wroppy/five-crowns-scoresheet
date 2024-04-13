@@ -1,6 +1,6 @@
 import "./Body.css";
 import PreGamePage from "../pre-game-page/PreGamePage";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import GamePage from "../game-page/GamePage";
 
 const Body = () => {
