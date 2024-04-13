@@ -1,0 +1,27 @@
+.add-score-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-dark);
+  width: 700px;
+}
+
+.add-score-modal span {
+  color: var(--text-primary);
+
+}
+
+.score-heading {
+  padding: 32px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
