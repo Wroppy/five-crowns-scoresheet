@@ -10,7 +10,7 @@ const Body = () => {
   return (
     <div className="body">
       {page === 1 && <PreGamePage setPage={setPage} players={players} setPlayers={setPlayers} />}
-      {page === 2 && <GamePage players={players} />}
+      {page === 2 && <GamePage players={players} setPage={setPage}/>}
     </div>
   );
 };
