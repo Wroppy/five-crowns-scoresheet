@@ -6,10 +6,5 @@
   align-items: center;
   padding-left: 1rem;
   font-size: 1.25rem;
-
-}
-
-.restart-game-button {
-  color: var(--text-primary) !important;
-  border-color: var(--text-primary) !important;
+  padding: 12px;
 }
